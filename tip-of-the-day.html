@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip of the Day - CyberSafe Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- HEADER -->
+    <header class="simple-header" id="top">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <!-- Profile dropdown will be injected by script.js -->
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="section-label">💡 Tip of the Day</h1>
+            <p class="section-subtitle">Daily cybersecurity tips to keep you safe online</p>
+        </div>
+
+        <!-- Today's Tip -->
+        <section class="tip-of-the-day-section">
+            <div class="tip-card glass-card">
+                <div class="tip-header">
+                    <div class="tip-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="tip-meta">
+                        <span class="tip-date" id="tipDate"></span>
+                        <span class="tip-category" id="tipCategory"></span>
+                    </div>
+                </div>
+                <h2 class="tip-title" id="tipTitle">Loading today's tip...</h2>
+                <div class="tip-content" id="tipContent">
+                    <p>Please wait while we load your personalized cybersecurity tip for today.</p>
+                </div>
+                <div class="tip-actions">
+                    <button class="tip-btn primary" onclick="getNewTip()">
+                        <i class="fas fa-refresh"></i>
+                        Get New Tip
+                    </button>
+                    <button class="tip-btn secondary" onclick="shareTip()">
+                        <i class="fas fa-share"></i>
+                        Share Tip
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tip Categories -->
+        <section class="tip-categories">
+            <h2 class="section-label">Browse Tips by Category</h2>
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-globe"></i>
+                    All Tips
+                </button>
+                <button class="category-btn" data-category="passwords">
+                    <i class="fas fa-key"></i>
+                    Passwords
+                </button>
+                <button class="category-btn" data-category="phishing">
+                    <i class="fas fa-fish"></i>
+                    Phishing
+                </button>
+                <button class="category-btn" data-category="social">
+                    <i class="fas fa-users"></i>
+                    Social Media
+                </button>
+                <button class="category-btn" data-category="mobile">
+                    <i class="fas fa-mobile-alt"></i>
+                    Mobile Security
+                </button>
+                <button class="category-btn" data-category="network">
+                    <i class="fas fa-wifi"></i>
+                    Network Security
+                </button>
+            </div>
+        </section>
+
+        <!-- Tips Archive -->
+        <section class="tips-archive">
+            <h2 class="section-label">Recent Tips</h2>
+            <div class="tips-grid" id="tipsGrid">
+                <!-- Tips will be loaded dynamically -->
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <!-- <section class="quick-actions">
+            <h2 class="section-label">Quick Actions</h2>
+            <div class="action-buttons">
+                <a href="trending-now.html" class="action-btn secondary">
+                    <i class="fas fa-fire"></i>
+                    Trending News
+                </a>
+                <a href="watch-videos.html" class="action-btn secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Videos
+                </a>
+            </div>
+        </section> -->
+    </main>
+
+    <script>
+        // Cybersecurity tips database
+        const tipsDatabase = [
+            {
+                title: "Use Strong, Unique Passwords",
+                content: "Create passwords with at least 12 characters including uppercase, lowercase, numbers, and symbols. Never reuse passwords across different accounts.",
+                category: "passwords",
+                icon: "fas fa-key"
+            },
+            {
+                title: "Enable Two-Factor Authentication",
+                content: "Add an extra layer of security by enabling 2FA on all your important accounts. This prevents unauthorized access even if your password is compromised.",
+                category: "passwords",
+                icon: "fas fa-shield-alt"
+            },
+            {
+                title: "Be Wary of Phishing Emails",
+                content: "Never click on suspicious links or download attachments from unknown senders. Always verify the sender's identity before taking any action.",
+                category: "phishing",
+                icon: "fas fa-fish"
+            },
+            {
+                title: "Keep Your Software Updated",
+                content: "Regularly update your operating system, browsers, and applications to patch security vulnerabilities and protect against known threats.",
+                category: "network",
+                icon: "fas fa-sync-alt"
+            },
+            {
+                title: "Use a VPN on Public Wi-Fi",
+                content: "When using public Wi-Fi networks, always connect through a VPN to encrypt your data and protect your privacy from potential eavesdroppers.",
+                category: "network",
+                icon: "fas fa-wifi"
+            },
+            {
+                title: "Review Your Social Media Privacy Settings",
+                content: "Regularly check and update your privacy settings on social media platforms. Limit who can see your posts and personal information.",
+                category: "social",
+                icon: "fas fa-users"
+            },
+            {
+                title: "Backup Your Data Regularly",
+                content: "Create regular backups of your important files and store them securely. This protects you from data loss due to ransomware or hardware failure.",
+                category: "network",
+                icon: "fas fa-database"
+            },
+            {
+                title: "Be Careful with Personal Information",
+                content: "Never share sensitive personal information like SSN, bank details, or passwords through email, text, or social media messages.",
+                category: "social",
+                icon: "fas fa-user-secret"
+            },
+            {
+                title: "Use Mobile Device Security",
+                content: "Enable screen locks, biometric authentication, and remote wipe capabilities on your mobile devices to protect your data if lost or stolen.",
+                category: "mobile",
+                icon: "fas fa-mobile-alt"
+            },
+            {
+                title: "Verify Before You Trust",
+                content: "Always verify the authenticity of requests for personal information, especially if they come via phone, email, or text message.",
+                category: "phishing",
+                icon: "fas fa-check-circle"
+            },
+            {
+                title: "Secure Your Home Network",
+                content: "Change default router passwords, enable WPA3 encryption, and regularly update your router's firmware to protect your home network.",
+                category: "network",
+                icon: "fas fa-home"
+            },
+            {
+                title: "Monitor Your Financial Accounts",
+                content: "Regularly review your bank and credit card statements for unauthorized transactions. Set up alerts for unusual activity.",
+                category: "passwords",
+                icon: "fas fa-credit-card"
+            },
+            {
+                title: "Use Secure Messaging Apps",
+                content: "Choose messaging apps that offer end-to-end encryption for sensitive conversations to protect your privacy.",
+                category: "mobile",
+                icon: "fas fa-comments"
+            },
+            {
+                title: "Be Skeptical of 'Too Good to Be True' Offers",
+                content: "If an offer seems too good to be true, it probably is. Scammers often use attractive offers to trick people into revealing personal information.",
+                category: "phishing",
+                icon: "fas fa-gift"
+            },
+            {
+                title: "Educate Your Family",
+                content: "Share cybersecurity knowledge with family members, especially children and elderly relatives, to protect everyone in your household.",
+                category: "social",
+                icon: "fas fa-family"
+            }
+        ];
+
+        let currentTipIndex = 0;
+        let displayedTips = [];
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDate();
+            getRandomTip();
+            loadTipsArchive();
+        });
+
+        function updateDate() {
+            const today = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('tipDate').textContent = today.toLocaleDateString('en-US', options);
+        }
+
+        function getRandomTip() {
+            // Generate a different tip based on current date and user session
+            const today = new Date();
+            const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / (1000 * 60 * 60 * 24));
+            const sessionId = sessionStorage.getItem('sessionId') || Math.random().toString(36).substr(2, 9);
+            
+            // Store session ID if not exists
+            if (!sessionStorage.getItem('sessionId')) {
+                sessionStorage.setItem('sessionId', sessionId);
+            }
+            
+            // Use day of year and session ID to get a consistent but different tip
+            const tipIndex = (dayOfYear + sessionId.length) % tipsDatabase.length;
+            const tip = tipsDatabase[tipIndex];
+            
+            displayTip(tip);
+        }
+
+        function getNewTip() {
+            // Get a different random tip
+            let newIndex;
+            do {
+                newIndex = Math.floor(Math.random() * tipsDatabase.length);
+            } while (newIndex === currentTipIndex && tipsDatabase.length > 1);
+            
+            currentTipIndex = newIndex;
+            displayTip(tipsDatabase[currentTipIndex]);
+        }
+
+        function displayTip(tip) {
+            document.getElementById('tipTitle').textContent = tip.title;
+            document.getElementById('tipContent').innerHTML = `<p>${tip.content}</p>`;
+            document.getElementById('tipCategory').textContent = tip.category.charAt(0).toUpperCase() + tip.category.slice(1);
+            document.getElementById('tipCategory').className = `tip-category ${tip.category}`;
+        }
+
+        function shareTip() {
+            const tip = {
+                title: document.getElementById('tipTitle').textContent,
+                content: document.getElementById('tipContent').textContent
+            };
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Cybersecurity Tip',
+                    text: `${tip.title}: ${tip.content}`,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers that don't support Web Share API
+                const shareText = `${tip.title}: ${tip.content}`;
+                navigator.clipboard.writeText(shareText).then(() => {
+                    alert('Tip copied to clipboard!');
+                });
+            }
+        }
+
+        function loadTipsArchive() {
+            const tipsGrid = document.getElementById('tipsGrid');
+            const recentTips = tipsDatabase.slice(0, 6); // Show first 6 tips
+            
+            tipsGrid.innerHTML = recentTips.map(tip => `
+                <div class="tip-item glass-card">
+                    <div class="tip-item-header">
+                        <i class="${tip.icon}"></i>
+                        <span class="tip-item-category ${tip.category}">${tip.category}</span>
+                    </div>
+                    <h3 class="tip-item-title">${tip.title}</h3>
+                    <p class="tip-item-content">${tip.content}</p>
+                </div>
+            `).join('');
+        }
+
+        function loadMoreTips() {
+            // Simulate loading more tips
+            const button = document.querySelector('.load-more-btn');
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
+            
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-plus"></i> Load More Tips';
+                // In a real application, you would load more tips from a server
+                alert('More tips loaded! (This is a demo)');
+            }, 1000);
+        }
+
+        // Category filtering
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                if (category === 'all') {
+                    loadTipsArchive();
+                } else {
+                    filterTipsByCategory(category);
+                }
+            });
+        });
+
+        function filterTipsByCategory(category) {
+            const filteredTips = tipsDatabase.filter(tip => tip.category === category);
+            const tipsGrid = document.getElementById('tipsGrid');
+            
+            tipsGrid.innerHTML = filteredTips.map(tip => `
+                <div class="tip-item glass-card">
+                    <div class="tip-item-header">
+                        <i class="${tip.icon}"></i>
+                        <span class="tip-item-category ${tip.category}">${tip.category}</span>
+                    </div>
+                    <h3 class="tip-item-title">${tip.title}</h3>
+                    <p class="tip-item-content">${tip.content}</p>
+                </div>
+            `).join('');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

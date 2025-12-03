@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Learning - CyberSafe</title>
+    <link rel="icon" type="image/svg+xml" href="logo1.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions"></div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > My Learning
+                </div>
+                <h1 class="course-title" id="learningTitle">📚 My Learning</h1>
+                <div class="course-meta">
+                    <span class="course-level" id="learningSubtitle">Track your learning progress</span>
+                    <button class="refresh-btn" onclick="loadLearningData()" title="Refresh Progress">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <!-- Learning Overview -->
+                        <div class="lesson-section">
+                            <h2>Learning Overview</h2>
+                            <div class="glass-card" style="padding:20px;">
+                                <div class="learning-stats">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">📖</div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" id="totalCourses">0</div>
+                                            <div class="stat-label">Total Courses</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">✅</div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" id="completedCourses">0</div>
+                                            <div class="stat-label">Completed</div>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">📊</div>
+                                        <div class="stat-content">
+                                            <div class="stat-number" id="completionRate">0%</div>
+                                            <div class="stat-label">Completion Rate</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Course Progress -->
+                        <div class="lesson-section">
+                            <h2>Course Progress</h2>
+                            <div class="glass-card" style="padding:20px;">
+                                <div class="course-list" id="courseList">
+                                    <div class="loading-message">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        Loading your learning progress...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quiz Performance -->
+                        <div class="lesson-section">
+                            <h2>Quiz Performance</h2>
+                            <div class="glass-card" style="padding:20px;">
+                                <div class="quiz-performance" id="quizPerformance">
+                                    <div class="loading-message">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        Loading quiz data...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Certificate Section -->
+                        <div class="lesson-section" id="certificateSection">
+                            <h2>🎓 Certificate of Completion</h2>
+                            <div class="glass-card certificate-container" style="padding:20px;">
+                                <div class="certificate-content" id="certificateContent">
+                                    <!-- Certificate will be loaded here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Quick Actions</h3>
+                            <div class="outline-list">
+                                <a href="home.html#courses" class="outline-item" style="text-decoration:none;">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Continue Learning</span>
+                                </a>
+                                <a href="profile.html" class="outline-item" style="text-decoration:none;">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">View Profile</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="sidebar-section">
+                            <h3>Learning Tips</h3>
+                            <div class="tip-card">
+                                <p>💡 Complete courses in order for the best learning experience.</p>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getFirestore, doc, setDoc, getDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBacxrxzn2X6WFAN8A5rTkBbEQS13bOAu0",
+            authDomain: "cybersafetyportal.firebaseapp.com",
+            projectId: "cybersafetyportal",
+            storageBucket: "cybersafetyportal.firebasestorage.app",
+            messagingSenderId: "855804474117",
+            appId: "1:855804474117:web:ccde2cc74a8105de5a3d6c",
+            measurementId: "G-C8JMK864ZV"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Make Firebase available globally
+        window.firebase = { auth, db, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, doc, setDoc, getDoc, updateDoc };
+    </script>
+    <script src="script.js"></script>
+    <script>
+        // Load learning data when page loads
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadLearningData();
+            
+            // Refresh data when page becomes visible (user returns from course)
+            document.addEventListener('visibilitychange', async function() {
+                if (!document.hidden) {
+                    await loadLearningData();
+                }
+            });
+        });
+
+        // Load user's learning data from Firestore
+        async function loadLearningData() {
+            try {
+                const userId = sessionStorage.getItem('userId');
+                const username = sessionStorage.getItem('username') || 'Guest';
+                
+                // Update page title
+                document.getElementById('learningTitle').textContent = `📚 ${username}'s Learning`;
+                document.getElementById('learningSubtitle').textContent = `Track ${username}'s learning progress`;
+                
+                if (!userId || !window.firebase) {
+                    showNoDataMessage();
+                    return;
+                }
+
+                const { db, doc, getDoc } = window.firebase;
+                const userDoc = await getDoc(doc(db, 'users', userId));
+                
+                if (userDoc.exists()) {
+                    const userData = userDoc.data();
+                    console.log('User data from Firestore:', userData); // Debug log
+                    await displayLearningData(userData);
+                } else {
+                    console.log('No user document found in Firestore'); // Debug log
+                    showNoDataMessage();
+                }
+            } catch (error) {
+                console.error('Error loading learning data:', error);
+                showErrorMessage();
+            }
+        }
+
+        // Display learning data
+        async function displayLearningData(userData) {
+            const coursesCompleted = userData.coursesCompleted || [];
+            const quizScores = userData.quizScores || {};
+            
+            console.log('Courses completed:', coursesCompleted); // Debug log
+            console.log('Quiz scores:', quizScores); // Debug log
+            
+            // Update overview stats
+            document.getElementById('totalCourses').textContent = '12'; // Total courses available
+            document.getElementById('completedCourses').textContent = coursesCompleted.length;
+            
+            const completionRate = Math.round((coursesCompleted.length / 12) * 100);
+            document.getElementById('completionRate').textContent = completionRate + '%';
+            
+            // Display course progress
+            await displayCourseProgress(coursesCompleted);
+            
+            // Display quiz performance
+            displayQuizPerformance(quizScores);
+            
+            // Check and display certificate
+            await checkAndDisplayCertificate();
+        }
+
+        // Display course progress (user-specific)
+        async function displayCourseProgress(coursesCompleted) {
+            const courseList = document.getElementById('courseList');
+            const courses = [
+                { id: 'course1', name: 'Introduction to Cyber Safety', description: 'Learn the basics of cyber safety and digital awareness' },
+                { id: 'course2', name: 'Online Threats and Cyber Crimes', description: 'Understand various cyber threats and criminal activities' },
+                { id: 'course3', name: 'Passwords and Account Security', description: 'Master password protection and account security' },
+                { id: 'course4', name: 'Safe Internet Usage', description: 'Learn safe browsing and internet practices' },
+                { id: 'course5', name: 'Social Media Awareness', description: 'Stay safe on social media platforms' },
+                { id: 'course6', name: 'Online Transactions & Digital Payments', description: 'Secure your digital financial transactions' },
+                { id: 'course7', name: 'Cyber Safety for Children & Parents', description: 'Protect children in the digital world' },
+                { id: 'course8', name: 'Cyber Safety for Professionals', description: 'Workplace cybersecurity and professional safety' },
+                { id: 'course9', name: 'Data Privacy and Digital Rights', description: 'Understand and protect your digital rights' },
+                { id: 'course10', name: 'Reporting & Help', description: 'Learn how to report cyber crimes and get help' },
+                { id: 'course11', name: 'Learning & Awareness Modules', description: 'Advanced learning modules and awareness' },
+                { id: 'course12', name: 'Emerging Trends in Cybersecurity', description: 'Stay updated with latest cybersecurity trends' }
+            ];
+
+            let html = '';
+            for (const course of courses) {
+                const isCompleted = coursesCompleted.includes(course.id);
+                const isAccessible = await isCourseAccessible(course.id);
+                const statusClass = isCompleted ? 'completed' : (isAccessible ? 'pending' : 'locked');
+                const statusIcon = isCompleted ? '✅' : (isAccessible ? '⏳' : '🔒');
+                const statusText = isCompleted ? 'Completed' : (isAccessible ? 'Not Started' : 'Locked');
+                
+                console.log(`Course ${course.id}: completed=${isCompleted}, accessible=${isAccessible}, status=${statusText}`); // Debug log
+                
+                html += `
+                    <div class="course-item ${statusClass}">
+                        <div class="course-info">
+                            <div class="course-header">
+                                <h3>${course.name}</h3>
+                                <span class="course-status ${statusClass}">
+                                    ${statusIcon} ${statusText}
+                                </span>
+                            </div>
+                            <p class="course-description">${course.description}</p>
+                            ${!isAccessible && !isCompleted ? 
+                                '<p class="course-lock-note">Complete the previous course to unlock this course</p>' : 
+                                ''
+                            }
+                        </div>
+                        <div class="course-actions">
+                            ${isCompleted ? 
+                                '<button class="btn-completed" disabled>Completed</button>' : 
+                                isAccessible ? 
+                                    `<a href="${course.id}.html" class="btn-start">Start Course</a>` :
+                                    '<button class="btn-locked" disabled>🔒 Locked</button>'
+                            }
+                        </div>
+                    </div>
+                `;
+            }
+            
+            courseList.innerHTML = html;
+        }
+
+        // Display quiz performance
+        function displayQuizPerformance(quizScores) {
+            const quizPerformance = document.getElementById('quizPerformance');
+            
+            if (Object.keys(quizScores).length === 0) {
+                quizPerformance.innerHTML = `
+                    <div class="no-quiz-data">
+                        <i class="fas fa-chart-line"></i>
+                        <p>No quiz data available yet. Complete some courses to see your performance!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '<div class="quiz-stats">';
+            let totalScore = 0;
+            let quizCount = 0;
+
+            Object.entries(quizScores).forEach(([quizId, score]) => {
+                const courseName = quizId.replace('quiz', 'Course ');
+                totalScore += score;
+                quizCount++;
+                
+                html += `
+                    <div class="quiz-item">
+                        <div class="quiz-info">
+                            <span class="quiz-name">${courseName}</span>
+                            <span class="quiz-score">${score}%</span>
+                        </div>
+                        <div class="quiz-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: ${score}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            const averageScore = Math.round(totalScore / quizCount);
+            html += `
+                <div class="quiz-summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Average Score:</span>
+                        <span class="summary-value">${averageScore}%</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Quizzes Taken:</span>
+                        <span class="summary-value">${quizCount}</span>
+                    </div>
+                </div>
+            </div>`;
+
+            quizPerformance.innerHTML = html;
+        }
+
+        // Show no data message
+        function showNoDataMessage() {
+            document.getElementById('courseList').innerHTML = `
+                <div class="no-data-message">
+                    <i class="fas fa-book-open"></i>
+                    <p>No learning data available yet. Start taking courses to track your progress!</p>
+                    <a href="home.html#courses" class="btn-start">Browse Courses</a>
+                </div>
+            `;
+        }
+
+        // Show error message
+        function showErrorMessage() {
+            document.getElementById('courseList').innerHTML = `
+                <div class="error-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p>Error loading learning data. Please try again later.</p>
+                </div>
+            `;
+        }
+
+        // Check and display certificate
+        async function checkAndDisplayCertificate() {
+            try {
+                const certificate = await getUserCertificate();
+                const certificateSection = document.getElementById('certificateSection');
+                const certificateContent = document.getElementById('certificateContent');
+                
+                if (certificate) {
+                    // User has a certificate, display it
+                    certificateContent.innerHTML = generateCertificateHTML(certificate);
+                } else {
+                    // Check if user is eligible for certificate
+                    const isEligible = await isEligibleForCertificate();
+                    if (isEligible) {
+                        // Generate certificate
+                        const generated = await generateCertificate();
+                        if (generated) {
+                            // Reload certificate data
+                            const newCertificate = await getUserCertificate();
+                            certificateContent.innerHTML = generateCertificateHTML(newCertificate);
+                        }
+                    } else {
+                        // User not eligible yet, show locked certificate preview
+                        const completedCourses = await getCompletedCourses();
+                        certificateContent.innerHTML = generateLockedCertificateHTML(completedCourses.length);
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking certificate:', error);
+                const completedCourses = await getCompletedCourses();
+                certificateContent.innerHTML = generateLockedCertificateHTML(completedCourses.length);
+            }
+        }
+
+        // Generate locked certificate HTML (preview for incomplete users)
+        function generateLockedCertificateHTML(completedCourses) {
+            const remainingCourses = 12 - completedCourses;
+            const progressPercentage = Math.round((completedCourses / 12) * 100);
+            
+            return `
+                <div class="certificate-wrapper locked-certificate">
+                    <div class="certificate-header">
+                        <div class="certificate-logo locked-logo">
+                            <img src="logo1.svg" alt="CyberSafe Logo" style="width: 80px; height: 80px;">
+                        </div>
+                        <h1 class="certificate-title locked-title">Certificate of Completion</h1>
+                        <h2 class="certificate-subtitle locked-subtitle">Cyber Safety & Digital Awareness</h2>
+                    </div>
+                    
+                    <div class="certificate-body">
+                        <div class="locked-overlay">
+                            <div class="locked-icon">🔒</div>
+                            <h3 class="locked-message">Certificate Locked</h3>
+                            <p class="locked-description">
+                                Complete all 12 courses to unlock your personalized certificate!
+                            </p>
+                        </div>
+                        
+                        <div class="certificate-preview">
+                            <p class="certificate-text preview-text">
+                                This certificate will be awarded to
+                            </p>
+                            <h3 class="certificate-name preview-name">[Your Name]</h3>
+                            <p class="certificate-text preview-text">
+                                upon successful completion of all 12 courses in the 
+                                <strong>Cyber Safety & Digital Awareness Program</strong>
+                            </p>
+                        </div>
+                        
+                        <div class="progress-section">
+                            <div class="progress-header">
+                                <h4>Your Progress</h4>
+                                <span class="progress-text">${completedCourses}/12 courses completed</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: ${progressPercentage}%"></div>
+                                </div>
+                                <span class="progress-percentage">${progressPercentage}%</span>
+                            </div>
+                            <div class="remaining-info">
+                                <p class="remaining-text">
+                                    <i class="fas fa-info-circle"></i>
+                                    ${remainingCourses} more course${remainingCourses !== 1 ? 's' : ''} to complete
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-footer">
+                            <p class="certificate-signature preview-signature">
+                                <strong>CyberSafe Portal</strong><br>
+                                Digital Security Education Platform
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-actions">
+                        <a href="home.html#courses" class="btn-continue">
+                            <i class="fas fa-play"></i> Continue Learning
+                        </a>
+                        <button class="btn-motivation" onclick="showMotivationMessage()">
+                            <i class="fas fa-trophy"></i> Why Complete All Courses?
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Generate certificate HTML
+        function generateCertificateHTML(certificate) {
+            const completionDate = formatCertificateDate(certificate.completionDate);
+            const completionPercentage = calculateCompletionPercentage(certificate.coursesCompleted);
+            
+            return `
+                <div class="certificate-wrapper">
+                    <div class="certificate-header">
+                        <div class="certificate-logo">
+                            <img src="logo1.svg" alt="CyberSafe Logo" style="width: 80px; height: 80px;">
+                        </div>
+                        <h1 class="certificate-title">Certificate of Completion</h1>
+                        <h2 class="certificate-subtitle">Cyber Safety & Digital Awareness</h2>
+                    </div>
+                    
+                    <div class="certificate-body">
+                        <p class="certificate-text">
+                            This is to certify that
+                        </p>
+                        <h3 class="certificate-name">${certificate.userName}</h3>
+                        <p class="certificate-text">
+                            has successfully completed all ${certificate.totalCourses} courses in the 
+                            <strong>Cyber Safety & Digital Awareness Program</strong>
+                        </p>
+                        
+                        <div class="certificate-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Completion Date:</span>
+                                <span class="detail-value">${completionDate}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Courses Completed:</span>
+                                <span class="detail-value">${certificate.coursesCompleted}/${certificate.totalCourses}</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Completion Rate:</span>
+                                <span class="detail-value">${completionPercentage}%</span>
+                            </div>
+                        </div>
+                        
+                        <div class="certificate-footer">
+                            <p class="certificate-signature">
+                                <strong>CyberSafe Portal</strong><br>
+                                Digital Security Education Platform
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="certificate-actions">
+                        <button class="btn-download" onclick="downloadCertificate()">
+                            <i class="fas fa-download"></i> Download Certificate
+                        </button>
+                        <button class="btn-print" onclick="printCertificate()">
+                            <i class="fas fa-print"></i> Print Certificate
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Download certificate function
+        function downloadCertificate() {
+            const certificateContent = document.getElementById('certificateContent');
+            const certificateWrapper = certificateContent.querySelector('.certificate-wrapper');
+            
+            // Create a new window for printing/downloading
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Certificate of Completion - Cyber Safety</title>
+                        <style>
+                            body { 
+                                font-family: 'Inter', 'Times New Roman', serif; 
+                                margin: 0; 
+                                padding: 20px; 
+                                background: white;
+                            }
+                            .certificate-wrapper { 
+                                border: 3px solid #2c3e50; 
+                                padding: 40px; 
+                                text-align: center; 
+                                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                                max-width: 800px;
+                                margin: 0 auto;
+                                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                            }
+                            .certificate-logo img { 
+                                width: 80px; 
+                                height: 80px; 
+                                margin-bottom: 20px; 
+                            }
+                            .certificate-title { 
+                                color: #2c3e50; 
+                                font-size: 36px; 
+                                margin: 20px 0; 
+                                font-weight: 700;
+                            }
+                            .certificate-subtitle { 
+                                color: #34495e; 
+                                font-size: 24px; 
+                                margin-bottom: 30px; 
+                                font-weight: 500;
+                            }
+                            .certificate-name { 
+                                color: #2c3e50; 
+                                font-size: 32px; 
+                                margin: 30px 0; 
+                                text-decoration: underline; 
+                                font-weight: 600;
+                            }
+                            .certificate-text { 
+                                font-size: 18px; 
+                                margin: 20px 0; 
+                                line-height: 1.6;
+                            }
+                            .certificate-details { 
+                                margin: 30px 0; 
+                                text-align: left; 
+                                max-width: 400px; 
+                                margin-left: auto; 
+                                margin-right: auto; 
+                            }
+                            .detail-item { 
+                                margin: 10px 0; 
+                                display: flex; 
+                                justify-content: space-between; 
+                                padding: 8px 0;
+                                border-bottom: 1px solid #e0e0e0;
+                            }
+                            .detail-label { 
+                                font-weight: bold; 
+                                color: #2c3e50;
+                            }
+                            .detail-value {
+                                color: #34495e;
+                            }
+                            .certificate-signature { 
+                                margin-top: 40px; 
+                                font-size: 16px; 
+                                color: #2c3e50;
+                                font-weight: 500;
+                            }
+                            .certificate-actions { 
+                                display: none; 
+                            }
+                            .locked-overlay,
+                            .certificate-preview,
+                            .progress-section,
+                            .locked-icon,
+                            .locked-message,
+                            .locked-description,
+                            .preview-text,
+                            .preview-name,
+                            .progress-header,
+                            .progress-text,
+                            .progress-bar-container,
+                            .progress-bar,
+                            .progress-fill,
+                            .progress-percentage,
+                            .remaining-info,
+                            .remaining-text,
+                            .preview-signature {
+                                display: none;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                        ${certificateWrapper.outerHTML}
+                    </body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Print certificate function
+        function printCertificate() {
+            downloadCertificate(); // Same functionality for now
+        }
+
+        // Show motivation message
+        function showMotivationMessage() {
+            const motivationModal = document.createElement('div');
+            motivationModal.className = 'motivation-modal';
+            motivationModal.innerHTML = `
+                <div class="motivation-content">
+                    <div class="motivation-header">
+                        <h3>🏆 Why Complete All Courses?</h3>
+                        <button class="close-modal" onclick="this.parentElement.parentElement.parentElement.remove()">×</button>
+                    </div>
+                    <div class="motivation-body">
+                        <div class="motivation-item">
+                            <div class="motivation-icon">🎓</div>
+                            <div class="motivation-text">
+                                <h4>Professional Recognition</h4>
+                                <p>Earn a verified certificate that demonstrates your cybersecurity knowledge to employers and peers.</p>
+                            </div>
+                        </div>
+                        <div class="motivation-item">
+                            <div class="motivation-icon">🛡️</div>
+                            <div class="motivation-text">
+                                <h4>Complete Protection</h4>
+                                <p>Master all aspects of digital safety - from basic security to advanced threat protection.</p>
+                            </div>
+                        </div>
+                        <div class="motivation-item">
+                            <div class="motivation-icon">📈</div>
+                            <div class="motivation-text">
+                                <h4>Career Advancement</h4>
+                                <p>Add this certificate to your resume and LinkedIn profile to boost your professional credibility.</p>
+                            </div>
+                        </div>
+                        <div class="motivation-item">
+                            <div class="motivation-icon">🌟</div>
+                            <div class="motivation-text">
+                                <h4>Personal Achievement</h4>
+                                <p>Join the elite group of users who have completed the full Cyber Safety program!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="motivation-footer">
+                        <a href="home.html#courses" class="btn-start-learning">Start Learning Now</a>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(motivationModal);
+        }
+    </script>
+</body>
+</html>

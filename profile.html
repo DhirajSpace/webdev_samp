@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions"></div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > Profile
+                </div>
+                <h1 class="course-title" id="profileTitle">👤 Profile</h1>
+                <div class="course-meta">
+                    <span class="course-level" id="welcomeText">Welcome</span>
+                </div>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>Account Details</h2>
+                            <div class="glass-card" style="padding:20px;">
+                                <div class="profile-info-grid">
+                                    <div class="profile-info-item">
+                                        <label>Full Name:</label>
+                                        <span id="profileFullName">Guest</span>
+                                    </div>
+                                    <div class="profile-info-item">
+                                        <label>Username:</label>
+                                        <span id="profileUsername">Guest</span>
+                                    </div>
+                                    <div class="profile-info-item">
+                                        <label>Email:</label>
+                                        <span id="profileEmail">Not available</span>
+                                    </div>
+                                    <div class="profile-info-item">
+                                        <label>Status:</label>
+                                        <span id="profileStatus">Active</span>
+                                    </div>
+                                </div>
+                                <div style="margin-top:20px; display:flex; gap:10px; flex-wrap:wrap;">
+                                    <a href="home.html#courses" class="next-step-btn">Go to Courses</a>
+                                    <button class="next-step-btn secondary" onclick="logout()">Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Quick Links</h3>
+                            <div class="outline-list">
+                                <a href="home.html#must-explore" class="outline-item" style="text-decoration:none;">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Trending Now</span>
+                                </a>
+                                <a href="tip-of-the-day.html" class="outline-item" style="text-decoration:none;">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Tip of the Day</span>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        (function(){
+            try {
+                const username = sessionStorage.getItem('username') || 'Guest';
+                const fullName = sessionStorage.getItem('userFullName') || username;
+                const email = sessionStorage.getItem('userEmail') || 'Not available';
+                const userId = sessionStorage.getItem('userId');
+                
+                // Update profile title to show username
+                document.getElementById('profileTitle').textContent = `👤 ${username}`;
+                
+                // Update welcome text
+                document.getElementById('welcomeText').textContent = `Welcome, ${fullName}`;
+                
+                // Update profile information
+                document.getElementById('profileFullName').textContent = fullName;
+                document.getElementById('profileUsername').textContent = username;
+                document.getElementById('profileEmail').textContent = email;
+                document.getElementById('profileStatus').textContent = (username && username !== 'Guest') ? 'Active' : 'Guest';
+                
+                // User data loaded from session storage
+                
+            } catch (e) {
+                console.error('Error loading profile:', e);
+            }
+        })();
+    </script>
+</body>
+</html>
+

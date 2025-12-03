@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Privacy and Digital Rights - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Data Privacy and Digital Rights
+                </div>
+                <h1 class="course-title">🔏 Data Privacy and Digital Rights</h1>
+                <p class="course-subtitle">Understanding your digital rights and privacy protection</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Understand data privacy laws</li>
+                                <li>Protect personal information</li>
+                                <li>Know your digital rights</li>
+                                <li>Control data sharing</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+                            
+                            
+
+                                <!-- Section 1: What Is Data Privacy? -->
+                                <div class="content-section">
+                                    <h4>🛡 1️⃣ What Is Data Privacy?</h4>
+                                    <p>Data privacy refers to the protection of personal information that you share online. This includes your:</p>
+                                    
+                                    <div class="highlight-box">
+                                        <ul>
+                                            <li>Name, address, phone number</li>
+                                            <li>Email and login credentials</li>
+                                            <li>Financial information</li>
+                                            <li>Browsing history, location, and app usage</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Key Points:</h5>
+                                        <ul>
+                                            <li>Data privacy ensures that your information is collected, stored, and shared responsibly</li>
+                                            <li>Personal data should only be used for intended purposes with your consent</li>
+                                            <li>Lack of data privacy can lead to identity theft, scams, or misuse of information</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Real-Life Example:</h5>
+                                        <p>An app asks for access to your contacts and location but never uses it for its stated function. This is a violation of data privacy.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Understanding Terms & Conditions -->
+                                <div class="content-section">
+                                    <h4>📜 2️⃣ Understanding Terms & Conditions</h4>
+                                    <p>Every website or app has terms and conditions (T&C), which outline the rules for using the service.</p>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Key Points:</h5>
+                                        <ul>
+                                            <li>T&C often mention how your data is collected, used, and shared</li>
+                                            <li>Many users skip reading them, risking unintentional consent to data collection</li>
+                                            <li>Look for clauses about data sharing with third parties, cookies, and marketing</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Tips:</h5>
+                                        <ul>
+                                            <li>Read summaries or privacy highlights if available</li>
+                                            <li>Avoid apps that ask for excessive permissions unrelated to their functionality</li>
+                                            <li>Use opt-out options wherever possible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: GDPR and Indian Data Protection Laws -->
+                                <div class="content-section">
+                                    <h4>🌍 3️⃣ GDPR and Indian Data Protection Laws</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 GDPR (General Data Protection Regulation):</h5>
+                                        <ul>
+                                            <li>European regulation protecting the privacy of EU citizens' personal data</li>
+                                            <li>Key principles include consent, transparency, right to access, and right to be forgotten</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Indian Data Protection Laws:</h5>
+                                        <ul>
+                                            <li>India is implementing the Data Protection Act, emphasizing consent, security, and accountability</li>
+                                            <li>Personal data must be collected fairly, stored securely, and not misused</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Takeaway:</h5>
+                                        <p>Understanding laws helps you exercise your rights and ensures companies comply with regulations.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: How Apps Collect and Use Your Data -->
+                                <div class="content-section">
+                                    <h4>📱 4️⃣ How Apps Collect and Use Your Data</h4>
+                                    <p>Apps can collect information in various ways:</p>
+                                    
+                                    <div class="highlight-box">
+                                        <ul>
+                                            <li><strong>Explicit consent:</strong> Data you provide while signing up (email, phone number)</li>
+                                            <li><strong>Implicit data:</strong> Location, browsing habits, app usage patterns</li>
+                                            <li><strong>Third-party sharing:</strong> Apps may share data with advertisers or analytics services</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Why it matters:</h5>
+                                        <ul>
+                                            <li>Data can be used for targeted ads, product recommendations, or even sold to other companies</li>
+                                            <li>Some apps overreach by collecting unnecessary permissions</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Tip:</h5>
+                                        <ul>
+                                            <li>Review app permissions in settings</li>
+                                            <li>Only allow access essential to the app's functionality</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 5: Steps to Protect Personal Information -->
+                                <div class="content-section">
+                                    <h4>🔐 5️⃣ Steps to Protect Personal Information</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Practical Tips:</h5>
+                                        <ol>
+                                            <li>Use strong, unique passwords for different accounts</li>
+                                            <li>Enable two-factor authentication (2FA) wherever possible</li>
+                                            <li>Limit app permissions to only what's necessary</li>
+                                            <li>Avoid oversharing personal information on social media or apps</li>
+                                            <li>Regularly review privacy settings on devices and apps</li>
+                                            <li>Clear cookies and browsing history periodically</li>
+                                            <li>Read privacy policies and T&C highlights before signing up</li>
+                                            <li>Use secure networks (VPNs) to prevent unauthorized data interception</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>A messaging app requests access to your contacts and microphone, but the main function is text messaging. Limiting permissions prevents unnecessary data collection.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Data Privacy</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Terms & Conditions</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">GDPR & Indian Laws</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">App Data Collection</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">5</span>
+                                    <span class="outline-text">Protecting Personal Info</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="course10.html" class="next-step-btn secondary">Next Course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Data Privacy and Digital Rights</p>
+                        <a href="course9-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

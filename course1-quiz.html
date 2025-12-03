@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Introduction to Cyber Safety - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <!-- <div class="brand">
+                <span class="brand-logo">🛡️</span>
+                <span class="brand-text">CyberSafe</span>
+            </div> -->
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+              </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="course1.html">Introduction to Cyber Safety</a> > Quiz
+                </div>
+                <h1 class="course-title">🧭 Quiz: Introduction to Cyber Safety</h1>
+                <p class="course-subtitle">Answer the questions below and submit to see your score</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <form class="lesson-section" id="quiz1">
+                            <h2>Quiz Questions</h2>
+                            <div class="quiz-content">
+                                <div class="quiz-question">
+                                    <h3>1. What is the main goal of Cyber Safety?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q1" value="a"> A. To restrict people from using the internet</label>
+                                        <label><input type="radio" name="q1" value="b"> B. To protect users from online threats and risks</label>
+                                        <label><input type="radio" name="q1" value="c"> C. To monitor social media</label>
+                                        <label><input type="radio" name="q1" value="d"> D. To avoid using technology</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>2. Which of the following is an example of a cybercrime?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q2" value="a"> A. Sending an email to a friend</label>
+                                        <label><input type="radio" name="q2" value="b"> B. Watching a movie online</label>
+                                        <label><input type="radio" name="q2" value="c"> C. Phishing or online fraud</label>
+                                        <label><input type="radio" name="q2" value="d"> D. Browsing the internet</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>3. What does a digital footprint mean?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q3" value="a"> A. The number of websites you visit</label>
+                                        <label><input type="radio" name="q3" value="b"> B. The data and information you leave online</label>
+                                        <label><input type="radio" name="q3" value="c"> C. The memory size of your device</label>
+                                        <label><input type="radio" name="q3" value="d"> D. The speed of your internet</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>4. Which of the following is a safe online practice?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q4" value="a"> A. Sharing passwords with friends</label>
+                                        <label><input type="radio" name="q4" value="b"> B. Clicking every link you receive</label>
+                                        <label><input type="radio" name="q4" value="c"> C. Using strong passwords and 2FA</label>
+                                        <label><input type="radio" name="q4" value="d"> D. Ignoring privacy settings</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>5. What is the first step if you face online harassment?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q5" value="a"> A. Ignore it and do nothing</label>
+                                        <label><input type="radio" name="q5" value="b"> B. Argue back online</label>
+                                        <label><input type="radio" name="q5" value="c"> C. Report and block the offender</label>
+                                        <label><input type="radio" name="q5" value="d"> D. Delete your account immediately</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>6. Which one is a form of cyberbullying?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q6" value="a"> A. Constructive feedback</label>
+                                        <label><input type="radio" name="q6" value="b"> B. Sending threatening or abusive messages</label>
+                                        <label><input type="radio" name="q6" value="c"> C. Liking someone's photo</label>
+                                        <label><input type="radio" name="q6" value="d"> D. Posting positive comments</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>7. What is phishing?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q7" value="a"> A. Playing online games</label>
+                                        <label><input type="radio" name="q7" value="b"> B. A scam that tricks users into sharing sensitive info</label>
+                                        <label><input type="radio" name="q7" value="c"> C. Downloading antivirus software</label>
+                                        <label><input type="radio" name="q7" value="d"> D. Sending legal emails</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>8. What should you do if you receive a suspicious email asking for your bank details?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q8" value="a"> A. Reply immediately</label>
+                                        <label><input type="radio" name="q8" value="b"> B. Click the link to verify your details</label>
+                                        <label><input type="radio" name="q8" value="c"> C. Delete it or report as spam</label>
+                                        <label><input type="radio" name="q8" value="d"> D. Forward it to friends</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>9. Which of the following is an example of unethical online behavior?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q9" value="a"> A. Giving credit to an author</label>
+                                        <label><input type="radio" name="q9" value="b"> B. Sharing fake news</label>
+                                        <label><input type="radio" name="q9" value="c"> C. Respecting others' privacy</label>
+                                        <label><input type="radio" name="q9" value="d"> D. Reporting cybercrimes</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>10. What is malware?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q10" value="a"> A. A type of music file</label>
+                                        <label><input type="radio" name="q10" value="b"> B. A harmful software that damages devices or steals data</label>
+                                        <label><input type="radio" name="q10" value="c"> C. A social media app</label>
+                                        <label><input type="radio" name="q10" value="d"> D. A browser extension</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>11. Which is an example of a passive digital footprint?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q11" value="a"> A. Posting a photo</label>
+                                        <label><input type="radio" name="q11" value="b"> B. Liking a video</label>
+                                        <label><input type="radio" name="q11" value="c"> C. Data collected automatically (like browsing history)</label>
+                                        <label><input type="radio" name="q11" value="d"> D. Writing a blog post</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>12. What should you never share publicly on the internet?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q12" value="a"> A. Favorite food</label>
+                                        <label><input type="radio" name="q12" value="b"> B. Home address or bank details</label>
+                                        <label><input type="radio" name="q12" value="c"> C. Hobbies</label>
+                                        <label><input type="radio" name="q12" value="d"> D. Educational interests</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>13. What does Cyber Ethics mean?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q13" value="a"> A. Using illegal websites carefully</label>
+                                        <label><input type="radio" name="q13" value="b"> B. Using the internet responsibly and respectfully</label>
+                                        <label><input type="radio" name="q13" value="c"> C. Avoiding technology</label>
+                                        <label><input type="radio" name="q13" value="d"> D. Always staying offline</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>14. What should you do to manage your digital footprint?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q14" value="a"> A. Share more photos</label>
+                                        <label><input type="radio" name="q14" value="b"> B. Post everything publicly</label>
+                                        <label><input type="radio" name="q14" value="c"> C. Review privacy settings and delete old posts</label>
+                                        <label><input type="radio" name="q14" value="d"> D. Use multiple fake accounts</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-question">
+                                    <h3>15. What is the safest type of website for online transactions?</h3>
+                                    <div class="quiz-options">
+                                        <label><input type="radio" name="q15" value="a"> A. One that starts with "http://"</label>
+                                        <label><input type="radio" name="q15" value="b"> B. One with spelling mistakes in the URL</label>
+                                        <label><input type="radio" name="q15" value="c"> C. One that starts with "https://" and has a lock icon</label>
+                                        <label><input type="radio" name="q15" value="d"> D. Any website with offers</label>
+                                    </div>
+                                </div>
+
+                                <div class="quiz-actions">
+                                    <a href="course1.html" class="next-step-btn secondary">Back to Course</a>
+                                    <button type="submit" class="next-step-btn">Submit Quiz</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>Quiz Info</h3>
+                            <p>15 questions • 10 min • Pass 50%</p>
+                        </div>
+                        <div class="sidebar-section">
+                            <h3>Scoring Guide</h3>
+                            <div class="scoring-guide">
+                                <div class="score-item">
+                                    <span class="score-range">13-15</span>
+                                    <span class="score-level">🌟 Excellent</span>
+                                    <p>You're a Cyber Safety Champion!</p>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-range">9-12</span>
+                                    <span class="score-level">👍 Good</span>
+                                    <p>You're aware but can improve.</p>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-range">5-8</span>
+                                    <span class="score-level">⚠️ Average</span>
+                                    <p>Review key topics again.</p>
+                                </div>
+                                <div class="score-item">
+                                    <span class="score-range">0-4</span>
+                                    <span class="score-level">❌ Needs Improvement</span>
+                                    <p>Take the course again.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getFirestore, doc, setDoc, getDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBacxrxzn2X6WFAN8A5rTkBbEQS13bOAu0",
+            authDomain: "cybersafetyportal.firebaseapp.com",
+            projectId: "cybersafetyportal",
+            storageBucket: "cybersafetyportal.firebasestorage.app",
+            messagingSenderId: "855804474117",
+            appId: "1:855804474117:web:ccde2cc74a8105de5a3d6c",
+            measurementId: "G-C8JMK864ZV"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        // Make Firebase available globally
+        window.firebase = { auth, db, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, doc, setDoc, getDoc, updateDoc };
+        
+        console.log('Firebase initialized on quiz page'); // Debug log
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+

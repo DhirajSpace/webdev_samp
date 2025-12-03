@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Now - CyberSafe Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- HEADER -->
+    <header class="simple-header" id="top">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="section-label">🔥 Trending Now</h1>
+            <p class="section-subtitle">Stay updated with the latest cybersecurity trends and news</p>
+        </div>
+
+        <!-- Trending Topics Grid -->
+        <section class="trending-section">
+            <div class="trending-grid">
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge hot">🔥 Hot</span>
+                        <span class="trending-time">2 hours ago</span>
+                    </div>
+                    <h3 class="trending-title">AI-Powered Cyber Attacks on the Rise</h3>
+                    <p class="trending-description">New research shows a 300% increase in AI-assisted phishing attacks targeting businesses worldwide.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 2.3k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 45 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 12 shares</span>
+                    </div>
+                </article>
+
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge new">🆕 New</span>
+                        <span class="trending-time">5 hours ago</span>
+                    </div>
+                    <h3 class="trending-title">Zero-Day Vulnerability in Popular Password Managers</h3>
+                    <p class="trending-description">Security researchers discover critical flaw affecting millions of users. Immediate action required.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 1.8k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 32 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 8 shares</span>
+                    </div>
+                </article>
+
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge trending">📈 Trending</span>
+                        <span class="trending-time">1 day ago</span>
+                    </div>
+                    <h3 class="trending-title">New GDPR Regulations Impact Global Data Privacy</h3>
+                    <p class="trending-description">Updated privacy laws require immediate compliance from all organizations handling EU citizen data.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 3.1k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 67 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 15 shares</span>
+                    </div>
+                </article>
+
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge alert">⚠️ Alert</span>
+                        <span class="trending-time">2 days ago</span>
+                    </div>
+                    <h3 class="trending-title">Ransomware Attacks Target Healthcare Sector</h3>
+                    <p class="trending-description">Multiple hospitals report ransomware incidents, highlighting the need for robust backup systems.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 2.7k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 89 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 23 shares</span>
+                    </div>
+                </article>
+
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge update">🔄 Update</span>
+                        <span class="trending-time">3 days ago</span>
+                    </div>
+                    <h3 class="trending-title">Quantum Computing Threat to Current Encryption</h3>
+                    <p class="trending-description">Experts warn that quantum computers could break current encryption methods within the next decade.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 1.9k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 28 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 6 shares</span>
+                    </div>
+                </article>
+
+                <article class="trending-card glass-card">
+                    <div class="trending-header">
+                        <span class="trending-badge popular">⭐ Popular</span>
+                        <span class="trending-time">1 week ago</span>
+                    </div>
+                    <h3 class="trending-title">Social Engineering Tactics Evolve with Remote Work</h3>
+                    <p class="trending-description">Cybercriminals adapt their strategies to exploit remote work vulnerabilities and human psychology.</p>
+                    <div class="trending-stats">
+                        <span class="stat"><i class="fas fa-eye"></i> 4.2k views</span>
+                        <span class="stat"><i class="fas fa-comment"></i> 156 comments</span>
+                        <span class="stat"><i class="fas fa-share"></i> 34 shares</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <!-- <section class="quick-actions">
+            <h2 class="section-label">Quick Actions</h2>
+            <div class="action-buttons">
+                
+                <a href="reporting-guide.html" class="action-btn secondary">
+                    <i class="fas fa-book"></i>
+                    Safety Guide
+                </a>
+            </div>
+        </section> -->
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

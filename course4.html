@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Internet Usage - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Safe Internet Usage
+                </div>
+                <h1 class="course-title">🌐 Safe Internet Usage</h1>
+                <p class="course-subtitle">Navigate the internet safely and securely</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Browse the internet safely</li>
+                                <li>Identify secure websites</li>
+                                <li>Understand browser security</li>
+                                <li>Learn about safe downloading</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+
+                            <!-- Module 4: Safe Internet Usage -->
+                            <div class="module-section">
+
+                                <!-- Section 1: Safe Browsing Practices -->
+                                <div class="content-section">
+                                    <h4>🧭 1. Safe Browsing Practices</h4>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 What Is Safe Browsing?</h5>
+                                        <p>Safe browsing means using the internet responsibly — avoiding harmful sites, protecting your data, and staying alert while online.</p>
+                                    </div>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 Key Safe Browsing Tips:</h5>
+                                        <ul>
+                                            <li>Use trusted search engines (like Google, Bing, DuckDuckGo)</li>
+                                            <li>Avoid suspicious or illegal websites (pirated content, adult, gambling)</li>
+                                            <li>Keep your browser updated to patch security vulnerabilities</li>
+                                            <li>Install an ad-blocker or browser security extension</li>
+                                            <li>Log out after using banking, email, or social media on shared devices</li>
+                                            <li>Use Private/Incognito mode on public computers</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="warning-box">
+                                        <h5>🔹 Why It Matters</h5>
+                                        <ul>
+                                            <li>Unsecured browsing can expose your device to malware</li>
+                                            <li>Phishing attacks and identity theft are common on unsafe sites</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Recognizing Secure Websites -->
+                                <div class="content-section">
+                                    <h4>🔒 2. Recognizing Secure Websites (HTTPS, SSL, etc.)</h4>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 What Is HTTPS?</h5>
+                                        <p>HTTPS encrypts the data between your browser and the website.</p>
+                                        <ul>
+                                            <li>Look for a lock 🔒 icon in the address bar</li>
+                                            <li>Ensure the address starts with <strong>https://</strong></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 SSL/TLS Certificates</h5>
+                                        <p>Certificates verify site identity and enable encryption. Without SSL, information you send (passwords, cards) can be intercepted.</p>
+                                    </div>
+
+                                    <div class="tip-box">
+                                        <h5>🔹 Always Check:</h5>
+                                        <ul>
+                                            <li>✅ Lock symbol in the browser bar</li>
+                                            <li>✅ "https://" instead of "http://"</li>
+                                            <li>✅ Correct spelling (beware of lookalikes like faceb00k.com)</li>
+                                        </ul>
+                                        <p><strong>Example:</strong> ✅ https://www.onlinesafety.gov.in &nbsp; ❌ http://www.onlinesafetygov.in</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Avoiding Dangerous Downloads and Links -->
+                                <div class="content-section">
+                                    <h4>⚠️ 3. Avoiding Dangerous Downloads and Links</h4>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 Types of Dangerous Content:</h5>
+                                        <ul>
+                                            <li>Fake apps or software from unofficial websites</li>
+                                            <li>Email attachments from unknown senders</li>
+                                            <li>Pop-up ads offering free gifts or prizes</li>
+                                            <li>“Too good to be true” links</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 Safety Tips:</h5>
+                                        <ul>
+                                            <li>Download only from official sources (Play Store, App Store, verified sites)</li>
+                                            <li>Hover over links to preview where they lead</li>
+                                            <li>Avoid torrent or cracked software sites</li>
+                                            <li>Use reliable antivirus that scans downloads automatically</li>
+                                            <li>Never install extensions or apps you do not trust</li>
+                                        </ul>
+                                        <p><strong>Example:</strong> If an email says “Your parcel is waiting — click here!”, do not click. Verify the sender or check the official website.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: Public Wi‑Fi Risks and Safe Usage -->
+                                <div class="content-section">
+                                    <h4>📶 4. Public Wi‑Fi Risks and Safe Usage</h4>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 What Are Public Wi‑Fi Networks?</h5>
+                                        <p>Public Wi‑Fi in cafés, airports, libraries is often unsecured, so others on the network may intercept your data.</p>
+                                    </div>
+
+                                    <div class="warning-box">
+                                        <h5>🔹 Common Risks:</h5>
+                                        <ul>
+                                            <li>Data theft and activity monitoring</li>
+                                            <li>Fake Wi‑Fi networks imitating real ones</li>
+                                            <li>Session hijacking of logged-in accounts</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 Safe Practices:</h5>
+                                        <ul>
+                                            <li>Avoid logging into bank or personal accounts</li>
+                                            <li>Use a VPN to encrypt your traffic</li>
+                                            <li>Turn off auto-connect to open networks</li>
+                                            <li>Forget the network after use</li>
+                                            <li>Enable your device’s firewall</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 5: Using VPNs for Privacy -->
+                                <div class="content-section">
+                                    <h4>🕶 5. Using VPNs for Privacy</h4>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 What Is a VPN?</h5>
+                                        <p>A Virtual Private Network (VPN) encrypts your connection and hides your IP address, making your browsing private and secure.</p>
+                                    </div>
+
+                                    <div class="highlight-box">
+                                        <h5>🔹 Benefits of Using a VPN:</h5>
+                                        <ul>
+                                            <li>Keeps your location and data private</li>
+                                            <li>Protects your connection on public Wi‑Fi</li>
+                                            <li>Allows secure access to regional content</li>
+                                            <li>Prevents ISP tracking and targeted advertising</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="tip-box">
+                                        <h5>🔹 How to Use VPNs Safely:</h5>
+                                        <ul>
+                                            <li>Choose trusted providers (ProtonVPN, NordVPN, ExpressVPN)</li>
+                                            <li>Avoid free VPNs that may sell your data</li>
+                                            <li>Turn VPN on before connecting to public networks</li>
+                                            <li>Disconnect when done to save battery/data</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>🧠 Key Takeaways</h2>
+                            <div class="takeaways-grid">
+                                <div class="takeaway-item">
+                                    <h4>💻 Safe Browsing</h4>
+                                    <p>Visit trusted, secure sites and avoid illegal ones</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🔒 HTTPS & SSL</h4>
+                                    <p>Always check for “https://” and the lock icon before sharing info</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>📦 Downloads & Links</h4>
+                                    <p>Avoid unknown links and untrusted downloads</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>📶 Public Wi‑Fi</h4>
+                                    <p>Be cautious; use VPNs to protect your data</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🕶 VPNs</h4>
+                                    <p>Encrypt your activity for maximum privacy</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>🧠 Real-World Example</h2>
+                            <div class="highlight-box">
+                                <p>Imagine you’re at a café using free Wi‑Fi to check your email. Without a VPN, a hacker nearby can intercept your login info. With a VPN and secure HTTPS websites, your connection is encrypted — your data stays safe.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Safe Browsing</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Secure Websites</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">Downloads & Links</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">Public Wi‑Fi</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">5</span>
+                                    <span class="outline-text">VPNs</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="course5.html" class="next-step-btn secondary">Next Course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Safe Internet Usage</p>
+                        <a href="course4-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

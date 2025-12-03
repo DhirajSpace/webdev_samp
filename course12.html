@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Trends in Cybersecurity - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Emerging Trends in Cybersecurity
+                </div>
+                <h1 class="course-title">🌟 Emerging Trends in Cybersecurity</h1>
+                <p class="course-subtitle">Stay updated with the latest cybersecurity trends and technologies</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Understand emerging threats</li>
+                                <li>Learn about new security technologies</li>
+                                <li>Stay updated with trends</li>
+                                <li>Prepare for future challenges</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+                            
+                            
+                                <!-- Section 1: AI in Cybersecurity -->
+                                <div class="content-section">
+                                    <h4>🤖 1️⃣ Artificial Intelligence (AI) in Cybersecurity</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Overview:</h5>
+                                        <p>AI and machine learning are increasingly used in cybersecurity to detect threats faster than traditional methods. AI can analyze massive amounts of data to identify anomalies, unusual patterns, or suspicious activity across networks, emails, and endpoints.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Applications:</h5>
+                                        <ul>
+                                            <li><strong>Threat detection:</strong> AI monitors network traffic to spot malware or ransomware in real time</li>
+                                            <li><strong>Phishing detection:</strong> Machine learning models analyze emails to flag suspicious content</li>
+                                            <li><strong>Behavioral analytics:</strong> AI detects abnormal user behavior that could indicate account compromise</li>
+                                            <li><strong>Automated response:</strong> Some systems can automatically isolate infected devices to contain threats</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Challenges:</h5>
+                                        <ul>
+                                            <li>Cybercriminals also use AI to automate attacks, craft realistic phishing messages, or create deepfakes</li>
+                                            <li>AI systems can generate false positives, requiring human oversight</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>A bank uses AI to detect unusual login attempts from new locations and temporarily locks the account until the user verifies activity.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: IoT and Smart Device Security -->
+                                <div class="content-section">
+                                    <h4>🌐 2️⃣ IoT and Smart Device Security</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Overview:</h5>
+                                        <p>The Internet of Things (IoT) connects everyday devices — smart TVs, thermostats, wearable devices, and even cars — to the internet. While convenient, these devices introduce new vulnerabilities.</p>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Common Risks:</h5>
+                                        <ul>
+                                            <li>Weak or default passwords</li>
+                                            <li>Unpatched firmware</li>
+                                            <li>Unencrypted communication</li>
+                                            <li>Devices being used in botnets for large-scale cyber attacks</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Best Practices:</h5>
+                                        <ul>
+                                            <li>Change default passwords immediately</li>
+                                            <li>Update device firmware regularly</li>
+                                            <li>Disable unused features like remote access</li>
+                                            <li>Monitor connected devices for abnormal activity</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>In 2016, the Mirai botnet attack infected thousands of IoT devices to launch one of the largest DDoS attacks in history.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Cloud Security Basics -->
+                                <div class="content-section">
+                                    <h4>☁️ 3️⃣ Cloud Security Basics</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Overview:</h5>
+                                        <p>Cloud computing enables storage and processing over the internet but introduces risks if security measures are inadequate.</p>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Key Risks:</h5>
+                                        <ul>
+                                            <li>Misconfigured cloud storage (leaking sensitive data)</li>
+                                            <li>Weak authentication or account hijacking</li>
+                                            <li>Insider threats and shared responsibility issues</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Security Measures:</h5>
+                                        <ul>
+                                            <li>Use encryption for data at rest and in transit</li>
+                                            <li>Enable multi-factor authentication (MFA)</li>
+                                            <li>Regularly review and configure access controls</li>
+                                            <li>Maintain backups and monitor access logs</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>A misconfigured AWS S3 bucket in 2017 exposed millions of users' personal records online, highlighting the importance of proper cloud security configuration.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: Future Threats & Preventive Technologies -->
+                                <div class="content-section">
+                                    <h4>🔮 4️⃣ Future Threats & Preventive Technologies</h4>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Potential Threats:</h5>
+                                        <ul>
+                                            <li><strong>Quantum computing attacks:</strong> Could potentially break current encryption standards</li>
+                                            <li><strong>Advanced AI-driven malware:</strong> Malware that adapts to antivirus and security software</li>
+                                            <li><strong>Deepfakes and misinformation campaigns:</strong> Used for identity theft, fraud, and social engineering</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Preventive Technologies:</h5>
+                                        <ul>
+                                            <li><strong>Zero Trust Security Models:</strong> Never assume trust; continuously verify users and devices</li>
+                                            <li><strong>Behavioral analytics:</strong> Detect unusual patterns in user behavior for early threat detection</li>
+                                            <li><strong>Automated threat intelligence platforms:</strong> Provide real-time updates on new attack vectors</li>
+                                            <li><strong>Regular software patching and updates:</strong> Close known vulnerabilities promptly</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>Companies are adopting AI-powered security dashboards that automatically flag suspicious login attempts, unusual file transfers, or potential insider threats.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">AI in Cybersecurity</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">IoT & Smart Devices</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">Cloud Security</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">Future Threats</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="home.html" class="next-step-btn secondary">Back to Courses</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Emerging Trends in Cybersecurity</p>
+                        <a href="course12-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

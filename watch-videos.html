@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Videos - CyberSafe Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="dashboard-body">
+    <!-- HEADER -->
+    <header class="simple-header" id="top">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <h1 class="section-label">🎥 Watch Videos</h1>
+            <p class="section-subtitle">Learn cybersecurity through engaging video content</p>
+        </div>
+
+        <!-- Video Categories -->
+        <!-- <section class="video-categories">
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">All Videos</button>
+                <button class="tab-btn" data-category="tutorials">Tutorials</button>
+                <button class="tab-btn" data-category="news">News & Updates</button>
+                <button class="tab-btn" data-category="interviews">Expert Interviews</button>
+                <button class="tab-btn" data-category="demos">Live Demos</button>
+            </div>
+        </section> -->
+
+        <!-- Featured Video -->
+        <section class="featured-video">
+            <h2 class="section-label">Featured Video</h2>
+            <div class="video-player glass-card">
+                <div class="video-container">
+                    <iframe width="960" height="540" src="https://www.youtube.com/embed/Fg9hCKH1sYs"
+                        title="Hackers expose deep cybersecurity vulnerabilities in AI | BBC News" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                    <div class="video-info">
+                        <h3>Complete Guide to Password Security</h3>
+                        <p>Learn how to create strong passwords and protect your accounts from cyber threats</p>
+                        <div class="video-meta">
+                            <span class="duration">15:30</span>
+                            <span class="views">12.5k views</span>
+                            <span class="date">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Grid -->
+        <section class="videos-section">
+            <h2 class="section-label">Latest Videos</h2>
+            <div class="videos-grid">
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/VVDBmBsp-rc"
+                            title="Marks Spencer says customer data stolen in cyber attack | BBC News" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Marks Spencer says customer data stolen in cyber attack | BBC News</h3>
+                        <p class="video-description">Learn to identify and avoid phishing emails and messages</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">5.2k views</span>
+                            <span class="date">1 day ago</span>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/KiZF7GIAs6Q"
+                            title="Ransomware attacks happening every day in UK, intelligence agents say | BBC News"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Ransomware attacks happening every day in UK, intelligence agents say |
+                            BBC News</h3>
+                        <p class="video-description">Step-by-step guide to setting up 2FA on your accounts</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">3.8k views</span>
+                            <span class="date">3 days ago</span>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/lftSPF7bQOI"
+                            title="Security Experts Talk Future Of Cyber Security | The Pulse | CNBC" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Security Experts Talk Future Of Cyber Security | The Pulse | CNBC</h3>
+                        <p class="video-description">Essential practices for secure web browsing</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">7.1k views</span>
+                            <span class="date">5 days ago</span>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/OlMdtAm9zEE"
+                            title="National Guard deploys cyber forces to St. Paul, Minnesota cyber attack"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">National Guard deploys cyber forces to St. Paul, Minnesota cyber attack
+                        </h3>
+                        <p class="video-description">Protect your business from cyber threats with these strategies</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">2.9k views</span>
+                            <span class="date">1 week ago</span>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/-thSQ6ca8oQ"
+                            title="Cyber-attack causes delays at three European airports | BBC News" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Cyber-attack causes delays at three European airports | BBC News</h3>
+                        <p class="video-description">Configure your social media accounts for maximum privacy</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">4.6k views</span>
+                            <span class="date">1 week ago</span>
+                        </div> -->
+                    </div>
+                </article>
+
+                <article class="video-card glass-card">
+                    <div class="video-embed-container">
+                        <iframe width="960" height="540" src="https://www.youtube.com/embed/Q7ZLg3xn-_I"
+                            title="Cybersecurity experts warn consumers of 'bluebugging'" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3 class="video-title">Cybersecurity experts warn consumers of 'bluebugging'</h3>
+                        <p class="video-description">Keep your smartphone and tablet secure from threats</p>
+                        <!-- <div class="video-stats">
+                            <span class="views">6.3k views</span>
+                            <span class="date">2 weeks ago</span>
+                        </div> -->
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Learning Path -->
+        <section class="learning-path">
+            <h2 class="section-label">Recommended Learning Path</h2>
+            <div class="path-steps">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Basics of Cybersecurity</h3>
+                        <p>Start with fundamental concepts and terminology</p>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Password Security</h3>
+                        <p>Learn to create and manage secure passwords</p>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Two-Factor Authentication</h3>
+                        <p>Add an extra layer of security to your accounts</p>
+                    </div>
+                </div>
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Safe Internet Practices</h3>
+                        <p>Develop habits for secure online behavior</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <!-- <section class="quick-actions">
+            <h2 class="section-label">Quick Actions</h2>
+            <div class="action-buttons">
+                <a href="trending-now.html" class="action-btn secondary">
+                    <i class="fas fa-fire"></i>
+                    Trending News
+                </a>
+            </div>
+        </section> -->
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        // Video functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ensure all video iframes are clickable and playable
+            const videoIframes = document.querySelectorAll('iframe[src*="youtube.com"]');
+
+            videoIframes.forEach(iframe => {
+                // Add click event to make sure videos are playable
+                iframe.addEventListener('click', function () {
+                    console.log('Video clicked - should be playable');
+                });
+
+                // Ensure iframe is properly loaded
+                iframe.addEventListener('load', function () {
+                    console.log('Video iframe loaded successfully');
+                });
+            });
+
+            // Category tab functionality
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabButtons.forEach(tab => tab.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    const category = this.getAttribute('data-category');
+                    console.log('Selected category:', category);
+                    // Here you could filter videos by category if needed
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

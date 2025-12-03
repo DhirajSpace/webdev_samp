@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
+  <title>CyberSafe & Digital Awareness Portal</title>
+  <link rel="icon" type="image/svg+xml" href="logo1.svg">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+
+  <!-- HEADER -->
+  <header class="simple-header" id="top">
+    <div class="simple-header-inner">
+      <div class="brand">
+        <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+        <span class="brand-text">CyberSafe</span>
+      </div>
+      <nav class="simple-nav">
+        <a href="#courses" class="simple-link">Courses</a>
+        <a href="#report" class="simple-link">Report</a>
+        <a href="#must-explore" class="simple-link">Explore</a>
+        <a href="#about" class="simple-link">About</a>
+      </nav>
+      <div class="simple-actions">
+        <button class="circle-btn" title="Profile">😊</button>
+        <button class="circle-btn" onclick="logout()" title="Logout">Logout
+        <a href="#index" ></a>
+      </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / SEARCH SECTION -->
+    <main class="main-content home-layout">
+      <section class="hero-grid">
+      <div class="hero-left glass-card">
+        <h1 class="prompt">Hello, What Do You Want To Learn?</h1>
+        <div class="search-row">
+           <!-- <span class="search-icon"></span>-->
+          <input id="homeSearchInput" class="search-input-large" type="text" placeholder="🔍 Search for courses, topics…">
+        </div>
+      </div>
+    </section>
+
+    <!-- COURSES SECTION -->
+    <section class="courses-section" id="courses">
+      <div class="section-head">
+        <h2 class="section-label">Courses</h2>
+        <a href="#courses" class="section-action" onclick="showAllCourses()">View All</a>
+      </div>
+      <div class="courses-grid">
+        <a href="course1.html" class="course-card">🧭 1. Introduction to Cyber Safety</a>
+        <a href="course2.html" class="course-card">🛡 2. Online Threats and Cyber Crimes</a>
+        <a href="course3.html" class="course-card">🔐 3. Passwords and Account Security</a>
+        <a href="course4.html" class="course-card">🌐 4. Safe Internet Usage</a>
+        <a href="course5.html" class="course-card">📱 5. Social Media Awareness</a>
+        <a href="course6.html" class="course-card">💳 6. Online Transactions & Digital Payments</a>
+        <a href="course7.html" class="course-card">👨‍👩‍👧 7. Cyber Safety for Children & Parents</a>
+        <a href="course8.html" class="course-card">🧑‍💼 8. Cyber Safety for Professionals</a>
+        <a href="course9.html" class="course-card">🔏 9. Data Privacy and Digital Rights</a>
+        <a href="course10.html" class="course-card">🧑‍💻 10. Reporting & Help</a>
+        <a href="course11.html" class="course-card">🎓 11. Learning & Awareness Modules</a>
+        <a href="course12.html" class="course-card">🌟 12. Emerging Trends in Cybersecurity</a>
+      </div>
+    </section>
+
+    <!-- REPORT SECTION -->
+    <section class="report-section" id="report">
+      <h2 class="section-label">Report Cyber Crime</h2>
+      <div class="report-grid">
+        <article class="report-card glass-card">
+          <h3 class="report-title">How to report</h3>
+          <ol class="report-steps">
+            <li>Stay calm and collect evidence: screenshots, URLs, emails, phone numbers.</li>
+            <li>Do not delete chats or messages; note date, time, and handles.</li>
+            <li>File a complaint on the National Cyber Crime Portal.</li>
+            <li>For financial fraud, contact your bank immediately and then report.</li>
+          </ol>
+          <div class="report-actions">
+            <a class="primary-link" href="https://cybercrime.gov.in" target="_blank" rel="noopener">Go to National Cyber Crime Portal</a>
+            <a class="primary-link secondary" href="reporting-guide.html">Read More</a>
+          </div>
+        </article>
+        <aside class="helpline-card">
+          <div class="helpline-label">National Helpline</div>
+          <div class="helpline-number">1930</div>
+          <p class="helpline-note">Call immediately for online financial fraud or urgent assistance.</p>
+        </aside>
+      </div>
+    </section>
+
+   <!-- MUST EXPLORE SECTION -->
+   <section class="must-explore-section" id="must-explore">
+    <h2 class="section-label">Must Explore</h2>
+    <div class="must-explore-row">
+      <a class="must-item" href="trending-now.html">Trending Now</a>
+      <a class="must-item" href="watch-videos.html">Watch Videos</a>
+      <a class="must-item" href="policy-laws.html">Policys & Laws</a>
+      <a class="must-item" href="tip-of-the-day.html">Tip of the Day</a>
+    </div>
+  </section>
+
+  <!-- ABOUT US SECTION -->
+  <section class="about-section" id="about">
+    <div class="section-head">
+      <h2 class="section-label">About Us</h2>
+    </div>
+    
+    <div class="about-content">
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="about-icon">👥</div>
+          <h3>1️⃣ Who We Are</h3>
+          <p>We are a dedicated team of cybersecurity enthusiasts, educators, and developers committed to making the digital world safer for everyone. Our mission is to empower users with the knowledge and tools to navigate the internet securely.</p>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="about-icon">🎯</div>
+          <h3>2️⃣ What We Do</h3>
+          <p>Our platform offers interactive courses, real-life case studies, quizzes, tutorials, and resources covering topics like online threats, password security, social media awareness, and data privacy. We provide actionable tips to help users stay protected in today's digital environment.</p>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="about-icon">💡</div>
+          <h3>3️⃣ Why We Matter</h3>
+          <p>As the internet becomes an integral part of our lives, cyber threats such as identity theft, phishing, and online fraud are increasing. We aim to bridge the knowledge gap and equip users—students, parents, and professionals alike—with the skills to safeguard themselves and their digital footprint.</p>
+        </div>
+
+        <div class="about-card glass-card">
+          <div class="about-icon">🚀</div>
+          <h3>4️⃣ How We Help Users</h3>
+          <p>Through our step-by-step tutorials, interactive quizzes, and real-world case studies, users can learn at their own pace and gain confidence in protecting their online presence. Our certification programs recognize learners' efforts and encourage continued engagement.</p>
+        </div>
+      </div>
+
+      <div class="about-values glass-card">
+        <div class="values-grid">
+          <div class="value-item">
+            <h4>Our Vision</h4>
+            <p>To make the internet safer for everyone.</p>
+          </div>
+          <div class="value-item">
+            <h4>Our Values</h4>
+            <p>Education, empowerment, accessibility, and awareness.</p>
+          </div>
+          <div class="value-item">
+            <h4>Call to Action</h4>
+            <p>"Join us today and become a confident digital citizen!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  
+    <div class="footer-note">© CyberSafe Portal</div>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+      import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+      import { getFirestore, doc, setDoc, getDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBacxrxzn2X6WFAN8A5rTkBbEQS13bOAu0",
+          authDomain: "cybersafetyportal.firebaseapp.com",
+          projectId: "cybersafetyportal",
+          storageBucket: "cybersafetyportal.firebasestorage.app",
+          messagingSenderId: "855804474117",
+          appId: "1:855804474117:web:ccde2cc74a8105de5a3d6c",
+          measurementId: "G-C8JMK864ZV"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const db = getFirestore(app);
+
+      // Make Firebase available globally
+      window.firebase = { auth, db, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged, doc, setDoc, getDoc, updateDoc };
+  </script>
+  <script src="script.js"></script>
+  <script>
+      // Load course completion status when page loads
+      document.addEventListener('DOMContentLoaded', async function() {
+          await loadCourseCompletionStatus();
+      });
+
+      // Load user's course completion status from Firestore
+      async function loadCourseCompletionStatus() {
+          try {
+              const userId = sessionStorage.getItem('userId');
+              
+              if (!userId || !window.firebase) {
+                  console.log('No user ID or Firebase not available');
+                  return;
+              }
+
+              const { db, doc, getDoc } = window.firebase;
+              const userDoc = await getDoc(doc(db, 'users', userId));
+              
+              if (userDoc.exists()) {
+                  const userData = userDoc.data();
+                  const coursesCompleted = userData.coursesCompleted || [];
+                  
+                  console.log('Courses completed:', coursesCompleted);
+                  
+                  // Update course cards with completion status
+                  await updateCourseCards(coursesCompleted);
+              }
+          } catch (error) {
+              console.error('Error loading course completion status:', error);
+          }
+      }
+
+      // Update course cards to show completion status and lock status
+      async function updateCourseCards(coursesCompleted) {
+          const courseCards = document.querySelectorAll('.course-card');
+          
+          for (const card of courseCards) {
+              const href = card.getAttribute('href');
+              if (href && href.startsWith('course')) {
+                  const courseId = href.replace('.html', '');
+                  const isCompleted = coursesCompleted.includes(courseId);
+                  const isAccessible = await isCourseAccessible(courseId);
+                  
+                  if (isCompleted) {
+                      // Add completed class and status
+                      card.classList.add('course-completed');
+                      
+                      // Add completion indicator
+                      const completionBadge = document.createElement('span');
+                      completionBadge.className = 'completion-badge';
+                      completionBadge.innerHTML = '✓ Completed';
+                      card.appendChild(completionBadge);
+                  } else if (!isAccessible) {
+                      // Lock inaccessible courses
+                      card.classList.add('locked-course');
+                      card.style.pointerEvents = 'none';
+                      card.style.opacity = '0.6';
+                      
+                      // Add lock icon
+                      const lockIcon = document.createElement('span');
+                      lockIcon.innerHTML = '🔒';
+                      lockIcon.style.marginLeft = '10px';
+                      card.appendChild(lockIcon);
+                      
+                      // Add tooltip
+                      card.title = 'Complete the previous course to unlock this course';
+                  }
+              }
+          }
+      }
+  </script>
+</body>
+</html>

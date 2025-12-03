@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Safety for Professionals - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Cyber Safety for Professionals
+                </div>
+                <h1 class="course-title">🧑‍💼 Cyber Safety for Professionals</h1>
+                <p class="course-subtitle">Workplace cybersecurity and professional best practices</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Protect workplace data</li>
+                                <li>Follow security protocols</li>
+                                <li>Recognize business email compromise</li>
+                                <li>Implement security best practices</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+                            
+                           
+
+                                <!-- Section 1: Workplace Cyber Hygiene -->
+                                <div class="content-section">
+                                    <h4>🧹 1️⃣ Workplace Cyber Hygiene</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Key Practices:</h5>
+                                        <ul>
+                                            <li>Keep software, antivirus, and operating systems updated</li>
+                                            <li>Avoid using personal devices for sensitive work without approval</li>
+                                            <li>Lock computers and mobile devices when unattended</li>
+                                            <li>Use strong, unique passwords and change them regularly</li>
+                                            <li>Be cautious with emails, attachments, and unknown links</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Real-Life Example:</h5>
+                                        <p>Leaving a workstation unlocked can allow unauthorized access to confidential files or emails.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Safe Use of Work Emails and Devices -->
+                                <div class="content-section">
+                                    <h4>📧 2️⃣ Safe Use of Work Emails and Devices</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Best Practices:</h5>
+                                        <ul>
+                                            <li>Do not open suspicious email attachments or links</li>
+                                            <li>Verify the sender before responding to requests for sensitive data</li>
+                                            <li>Avoid using work emails for personal subscriptions</li>
+                                            <li>Encrypt sensitive emails when sending confidential information</li>
+                                            <li>Enable two-factor authentication (2FA) wherever possible</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>A phishing email disguised as IT support requests a password reset. Clicking it can compromise company accounts.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Protecting Company Data -->
+                                <div class="content-section">
+                                    <h4>🛡 3️⃣ Protecting Company Data</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Key Guidelines:</h5>
+                                        <ul>
+                                            <li>Store sensitive files in approved, encrypted company storage</li>
+                                            <li>Avoid sharing internal documents via personal email or chat apps</li>
+                                            <li>Use VPNs when accessing company networks remotely</li>
+                                            <li>Report any lost or stolen devices immediately</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>Transferring customer data to a personal cloud account risks data leakage and legal consequences.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: Avoiding Insider Threats -->
+                                <div class="content-section">
+                                    <h4>👀 4️⃣ Avoiding Insider Threats</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 What is an Insider Threat?</h5>
+                                        <p>Threats from employees, contractors, or partners who misuse access to company data.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Prevention Tips:</h5>
+                                        <ul>
+                                            <li>Access only the data needed for your role</li>
+                                            <li>Report suspicious activity immediately</li>
+                                            <li>Never share login credentials with colleagues</li>
+                                            <li>Attend cybersecurity awareness training provided by the organization</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>An employee sharing confidential product designs with external vendors without authorization is an insider threat.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 5: Remote Work Security Tips -->
+                                <div class="content-section">
+                                    <h4>💻 5️⃣ Remote Work Security Tips</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Best Practices:</h5>
+                                        <ul>
+                                            <li>Use company-approved devices and secure Wi-Fi networks</li>
+                                            <li>Avoid public Wi-Fi for accessing sensitive work systems</li>
+                                            <li>Enable VPNs to encrypt your internet connection</li>
+                                            <li>Backup important files regularly on approved cloud or local storage</li>
+                                            <li>Keep personal and professional accounts separate</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>🔹 Example:</h5>
+                                        <p>Logging into company email on unsecured public Wi-Fi can allow hackers to intercept sensitive communications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                       
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Workplace Cyber Hygiene</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Safe Email & Device Use</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">Protecting Company Data</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">Avoiding Insider Threats</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">5</span>
+                                    <span class="outline-text">Remote Work Security</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="course9.html" class="next-step-btn secondary">Next Course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Cyber Safety for Professionals</p>
+                        <a href="course8-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

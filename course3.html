@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwords and Account Security - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="course-container">
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Passwords and Account Security
+                </div>
+                <h1 class="course-title">🔐 Passwords and Account Security</h1>
+                <p class="course-subtitle">Learn how to create and manage secure passwords</p>
+            </section>
+
+            <section class="course-content">
+                <div class="content-grid">
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Create strong, unique passwords</li>
+                                <li>Use password managers effectively</li>
+                                <li>Enable two-factor authentication</li>
+                                <li>Recognize password security best practices</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+                            
+                            <!-- Module 3: Passwords and Account Security -->
+                            <div class="module-section">
+                                
+                                <!-- Section 1: Creating Strong and Secure Passwords -->
+                                <div class="content-section">
+                                    <h4>🧩 1. Creating Strong and Secure Passwords</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 What Is a Strong Password?</h5>
+                                        <p>A strong password is one that is difficult for others (or hackers) to guess or crack using software tools. It protects your personal and financial information from unauthorized access.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Characteristics of a Strong Password:</h5>
+                                        <ul>
+                                            <li>At least 12–16 characters long</li>
+                                            <li>Contains a mix of uppercase (A–Z) and lowercase (a–z) letters</li>
+                                            <li>Includes numbers (0–9) and special symbols like @, #, $, %</li>
+                                            <li>Avoids personal information (name, DOB, pet's name, etc.)</li>
+                                            <li>Different for each account</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>📝 Example:</h5>
+                                        <p><strong>Weak Password:</strong> madhukar123</p>
+                                        <p><strong>Strong Password:</strong> M@dhU_2025#Safe</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Tips for Strong Passwords:</h5>
+                                        <ul>
+                                            <li>Use passphrases (e.g., "MyDogRuns@5am!")</li>
+                                            <li>Change passwords periodically (every 3–6 months)</li>
+                                            <li>Never write them on sticky notes or share with anyone</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 2: Two-Factor Authentication -->
+                                <div class="content-section">
+                                    <h4>🔐 2. Importance of Two-Factor Authentication (2FA)</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 What Is 2FA?</h5>
+                                        <p>Two-Factor Authentication adds an extra layer of protection by requiring two verification steps:</p>
+                                        <ol>
+                                            <li>Something you know — your password</li>
+                                            <li>Something you have — OTP, email code, or authentication app</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Common 2FA Methods:</h5>
+                                        <ul>
+                                            <li>OTP via SMS or email</li>
+                                            <li>Authenticator apps (like Google Authenticator, Authy)</li>
+                                            <li>Biometric verification (fingerprint, face ID)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Why It's Important:</h5>
+                                        <ul>
+                                            <li>Prevents hackers from logging in even if they know your password</li>
+                                            <li>Protects sensitive accounts like banking, email, and social media</li>
+                                            <li>Adds strong defense against phishing and credential theft</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Password Managers -->
+                                <div class="content-section">
+                                    <h4>🧰 3. Managing Passwords Safely (Password Managers)</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 What Is a Password Manager?</h5>
+                                        <p>A password manager is a secure tool that stores all your passwords in an encrypted vault, accessible with one master password.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Benefits:</h5>
+                                        <ul>
+                                            <li>Remembers and auto-fills your passwords</li>
+                                            <li>Generates strong, random passwords</li>
+                                            <li>Reduces password fatigue (no need to memorize dozens)</li>
+                                            <li>Syncs securely across devices</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Examples of Trusted Password Managers:</h5>
+                                        <ul>
+                                            <li>Bitwarden</li>
+                                            <li>1Password</li>
+                                            <li>LastPass</li>
+                                            <li>Dashlane</li>
+                                            <li>Google Password Manager</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <h5>🔸 Safety Tips:</h5>
+                                        <ul>
+                                            <li>Use a strong master password</li>
+                                            <li>Enable 2FA on your password manager</li>
+                                            <li>Never share your vault or export passwords carelessly</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: Recognizing Suspicious Login Attempts -->
+                                <div class="content-section">
+                                    <h4>🚨 4. Recognizing Suspicious Login Attempts</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 Common Warning Signs:</h5>
+                                        <ul>
+                                            <li>You receive login alerts from unknown devices or locations</li>
+                                            <li>You notice password reset emails you didn't request</li>
+                                            <li>You're logged out suddenly from multiple devices</li>
+                                            <li>You find unusual activity (posts, messages, transactions)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔸 What to Do:</h5>
+                                        <ul>
+                                            <li>Immediately change your password</li>
+                                            <li>Enable 2FA if not already done</li>
+                                            <li>Review your login history or account activity</li>
+                                            <li>Report suspicious access to the platform (e.g., Google, Instagram, etc.)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Section 5: Account Recovery -->
+                                <div class="content-section">
+                                    <h4>🧯 5. What To Do If Your Account Is Hacked</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔹 Step-by-Step Recovery:</h5>
+                                        <ol>
+                                            <li><strong>Stay Calm</strong> — Don't panic.</li>
+                                            <li><strong>Reset your password</strong> immediately using "Forgot Password."</li>
+                                            <li><strong>Use a recovery email/phone number</strong> to regain access.</li>
+                                            <li><strong>Enable 2FA</strong> once you recover the account.</li>
+                                            <li><strong>Check linked apps and devices</strong> — remove any unknown access.</li>
+                                            <li><strong>Scan your device</strong> for malware or keyloggers.</li>
+                                            <li><strong>Inform contacts</strong> — warn them about any suspicious messages sent from your account.</li>
+                                            <li><strong>Report to authorities</strong> if financial or personal data was stolen (via cybercrime.gov.in).</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>🧠 Key Takeaways</h2>
+                            <div class="takeaways-grid">
+                                <div class="takeaway-item">
+                                    <h4>🔐 Strong Passwords</h4>
+                                    <p>First defense against hackers</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🔒 2FA</h4>
+                                    <p>Adds extra protection layer</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🧰 Password Managers</h4>
+                                    <p>Help manage many secure passwords</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🚨 Suspicious Logins</h4>
+                                    <p>Early warning sign of hacking</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🔄 Account Recovery</h4>
+                                    <p>Essential step in damage control</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Strong Passwords</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Two-Factor Authentication</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">Password Managers</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">Suspicious Logins</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">5</span>
+                                    <span class="outline-text">Account Recovery</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="course4.html" class="next-step-btn secondary">Next Course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Passwords and Account Security</p>
+                        <a href="course3-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

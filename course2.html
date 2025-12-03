@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Threats and Cyber Crimes - CyberSafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- HEADER -->
+    <header class="simple-header">
+        <div class="simple-header-inner">
+            <div class="brand">
+                <img src="logo1.svg" alt="CyberSafe Logo" class="brand-logo-img" style="width: 32px; height: 32px; margin-right: 8px;">
+                <span class="brand-text">CyberSafe</span>
+            </div>
+            <nav class="simple-nav">
+                <a href="home.html" class="simple-link">Home</a>
+                <a href="home.html#courses" class="simple-link">Courses</a>
+                <a href="home.html#report" class="simple-link">Report</a>
+                <a href="home.html#must-explore" class="simple-link">News</a>
+            </nav>
+            <div class="simple-actions">
+                <button class="circle-btn" title="Profile">😊</button>
+                <button class="circle-btn" onclick="logout()" title="Logout">↪</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- COURSE CONTENT -->
+    <main class="course-main">
+        <div class="course-container">
+            <!-- Course Header -->
+            <section class="course-header">
+                <div class="course-breadcrumb">
+                    <a href="home.html">Home</a> > <a href="home.html#courses">Courses</a> > Online Threats and Cyber Crimes
+                </div>
+                <h1 class="course-title">🛡 Online Threats and Cyber Crimes</h1>
+                <p class="course-subtitle">Understanding different types of cyber threats and criminal activities</p>
+            </section>
+
+            <!-- Course Content -->
+            <section class="course-content">
+                <div class="content-grid">
+                    <!-- Main Content -->
+                    <div class="content-main">
+                        <div class="lesson-section">
+                            <h2>📚 Learning Objectives</h2>
+                            <ul class="objectives-list">
+                                <li>Identify various types of cyber threats</li>
+                                <li>Understand common cybercrime patterns</li>
+                                <li>Recognize phishing and social engineering</li>
+                                <li>Learn about malware and ransomware</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>📖 Course Content</h2>
+                            
+                            <!-- Module 2: Online Threats and Cyber Crimes -->
+                            <div class="module-section">
+                                
+                                <!-- Section 1: Introduction -->
+                                <div class="content-section">
+                                    <h4>⚠️ 1. Introduction</h4>
+                                    <p>The internet is a powerful tool — but it also opens the door to cyber threats and online crimes that can cause serious harm. Cybercriminals use technology to steal information, money, or identities, and sometimes to harass or mislead people.</p>
+                                    <p>Learning about these threats is the first step to staying safe online.</p>
+                                </div>
+
+                                <!-- Section 2: Phishing and Email Scams -->
+                                <div class="content-section">
+                                    <h4>🧩 2. Phishing and Email Scams</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>💬 What is Phishing?</h5>
+                                        <p>Phishing is a technique used by cybercriminals to trick people into sharing sensitive information such as passwords, OTPs, or bank details. It often comes through emails, text messages, or fake websites that look legitimate.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>📧 Common Examples:</h5>
+                                        <ul>
+                                            <li>An email pretending to be from your bank asking to "verify your account."</li>
+                                            <li>A message from a fake e-commerce site about a "refund" or "gift voucher."</li>
+                                            <li>A SMS claiming you've "won a lottery" and asking for personal details.</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🛡️ How to Protect Yourself:</h5>
+                                        <ul>
+                                            <li>Do not click on links or attachments from unknown senders</li>
+                                            <li>Check the email address and URL carefully — small spelling mistakes are common in fake sites</li>
+                                            <li>Enable two-factor authentication (2FA) on all important accounts</li>
+                                            <li>If unsure, contact the organization directly via their official website</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <p><strong>💡 Tip:</strong> Legitimate companies will never ask for your password, OTP, or PIN via email or message.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 3: Malware, Viruses, and Ransomware -->
+                                <div class="content-section">
+                                    <h4>🦠 3. Malware, Viruses, and Ransomware</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>💻 What is Malware?</h5>
+                                        <p>Malware stands for "malicious software." It includes programs designed to damage, steal, or control your device or data.</p>
+                                    </div>
+                                    
+                                    <div class="threats-grid">
+                                        <div class="threat-item">
+                                            <h5>⚙️ Types of Malware:</h5>
+                                            <p><strong>Virus:</strong> Attaches to files and spreads between computers.</p>
+                                            <p><strong>Trojan Horse:</strong> Pretends to be a safe file but gives hackers control of your system.</p>
+                                            <p><strong>Spyware:</strong> Secretly monitors your online activity and steals personal data.</p>
+                                            <p><strong>Ransomware:</strong> Locks your files and demands payment (ransom) to unlock them.</p>
+                                        </div>
+                                        
+                                        <div class="threat-item">
+                                            <h5>🧰 How Malware Spreads:</h5>
+                                            <ul>
+                                                <li>Downloading files from untrusted websites</li>
+                                                <li>Clicking infected links in emails or ads</li>
+                                                <li>Installing pirated software</li>
+                                                <li>Using infected USB drives</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🛡️ Protection Tips:</h5>
+                                        <ul>
+                                            <li>Use trusted antivirus software and update it regularly</li>
+                                            <li>Avoid downloading from unknown sources</li>
+                                            <li>Keep your operating system and apps updated</li>
+                                            <li>Regularly back up your files to avoid data loss</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <p><strong>🚫 Never pay ransom to cybercriminals — instead, contact law enforcement or cybersecurity experts.</strong></p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 4: Identity Theft and Data Breaches -->
+                                <div class="content-section">
+                                    <h4>🕵️ 4. Identity Theft and Data Breaches</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>💳 What is Identity Theft?</h5>
+                                        <p>When someone uses your personal information — like your name, Aadhaar number, or bank details — without permission, it's called identity theft.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>📂 What is a Data Breach?</h5>
+                                        <p>A data breach happens when hackers gain unauthorized access to sensitive data (e.g., customer databases, login credentials, etc.).</p>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>⚠️ Examples:</h5>
+                                        <ul>
+                                            <li>A hacker stealing your card details from an online shopping site</li>
+                                            <li>Someone using your identity to open fake accounts or loans</li>
+                                            <li>A leaked database exposing millions of users' passwords</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🛡️ How to Stay Safe:</h5>
+                                        <ul>
+                                            <li>Use unique passwords for every account</li>
+                                            <li>Don't share personal information on social media</li>
+                                            <li>Check your bank and credit card statements regularly</li>
+                                            <li>Use secure (HTTPS) websites for online transactions</li>
+                                            <li>Enable account alerts to monitor suspicious activity</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <p><strong>💡 If your identity is stolen, report it immediately at cybercrime.gov.in and to your bank.</strong></p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 5: Online Fraud and Financial Scams -->
+                                <div class="content-section">
+                                    <h4>💰 5. Online Fraud and Financial Scams</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🪤 What are Online Frauds?</h5>
+                                        <p>These are crimes where people are tricked into giving money or financial details through fake websites, messages, or calls.</p>
+                                    </div>
+                                    
+                                    <div class="threats-grid">
+                                        <div class="threat-item">
+                                            <h5>💣 Common Types of Scams:</h5>
+                                            <ul>
+                                                <li><strong>Fake Online Shopping Sites:</strong> Offer cheap deals but never deliver products</li>
+                                                <li><strong>Lottery/Prize Scams:</strong> Claim you've "won money" but ask for a "processing fee"</li>
+                                                <li><strong>Job Scams:</strong> Offer fake jobs and ask for "registration" or "training" fees</li>
+                                                <li><strong>Investment Scams:</strong> Promise "guaranteed returns" or "double your money"</li>
+                                                <li><strong>UPI/OTP Scams:</strong> Trick you into sharing OTPs or scanning QR codes to steal funds</li>
+                                            </ul>
+                                        </div>
+                                        
+                                        <div class="threat-item">
+                                            <h5>🛡️ How to Avoid Them:</h5>
+                                            <ul>
+                                                <li>Shop only on reputed websites (look for HTTPS & reviews)</li>
+                                                <li>Never share your OTP, CVV, or PIN</li>
+                                                <li>Be skeptical of "too good to be true" offers</li>
+                                                <li>Call 1930 (National Helpline) immediately if scammed</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <p><strong>⚠️ Remember:</strong> Real companies don't ask for money upfront to give you a job, loan, or prize.</p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 6: Social Engineering Attacks -->
+                                <div class="content-section">
+                                    <h4>🧠 6. Social Engineering Attacks</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🕴️ What is Social Engineering?</h5>
+                                        <p>It's when criminals manipulate people psychologically into revealing information or performing actions that compromise security.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>💬 Examples:</h5>
+                                        <ul>
+                                            <li>A fake IT support person calling to "fix your computer"</li>
+                                            <li>A scammer posing as your boss asking for an urgent money transfer</li>
+                                            <li>Fraudsters pretending to be bank officials verifying your details</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🧰 How to Defend Yourself:</h5>
+                                        <ul>
+                                            <li>Verify the person's identity before sharing information</li>
+                                            <li>Don't rush — scammers often create fake urgency</li>
+                                            <li>Be cautious about what you share on social media</li>
+                                            <li>Remember: Genuine officials never ask for confidential information</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <p><strong>💡 The weakest link in cybersecurity is often human trust — stay alert!</strong></p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 7: Cyberbullying and Online Harassment -->
+                                <div class="content-section">
+                                    <h4>💬 7. Cyberbullying and Online Harassment</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>😔 What Is Cyberbullying?</h5>
+                                        <p>Cyberbullying is the act of intimidating, threatening, or humiliating someone through digital platforms like social media, chat apps, or games.</p>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <h5>💢 Examples:</h5>
+                                        <ul>
+                                            <li>Spreading rumors or private information online</li>
+                                            <li>Posting insulting comments or memes</li>
+                                            <li>Sending abusive messages repeatedly</li>
+                                            <li>Impersonating someone to harm their reputation</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🛡️ How to Handle It:</h5>
+                                        <ul>
+                                            <li>Don't respond or retaliate</li>
+                                            <li>Take screenshots as evidence</li>
+                                            <li>Block and report the bully</li>
+                                            <li>Inform parents, teachers, or authorities</li>
+                                            <li>File a complaint at cybercrime.gov.in</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tip-box">
+                                        <p><strong>🧡 Cyber kindness matters — use technology to uplift, not harm.</strong></p>
+                                    </div>
+                                </div>
+
+                                <!-- Section 8: Fake News and Misinformation -->
+                                <div class="content-section">
+                                    <h4>📰 8. Fake News and Misinformation</h4>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🧠 What is Fake News?</h5>
+                                        <p>Fake news refers to false or misleading information spread online to deceive or manipulate people.</p>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>📢 Forms of Misinformation:</h5>
+                                        <ul>
+                                            <li>Altered images or videos (deepfakes)</li>
+                                            <li>Fake health or political news</li>
+                                            <li>Misleading headlines that twist facts</li>
+                                            <li>Viral social media posts without reliable sources</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="highlight-box">
+                                        <h5>🔍 How to Identify Fake News:</h5>
+                                        <ul>
+                                            <li>Check the source and author</li>
+                                            <li>Verify using trusted fact-checking sites (like PIB Fact Check, Alt News)</li>
+                                            <li>Look for grammar errors or exaggerated claims</li>
+                                            <li>Don't forward anything before confirming its authenticity</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="warning-box">
+                                        <p><strong>⚠️ Sharing fake news can cause panic, hate, or even legal trouble — Think Before You Share!</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h2>🧠 Key Takeaways</h2>
+                            <div class="takeaways-grid">
+                                <div class="takeaway-item">
+                                    <h4>⚠️ Threat Awareness</h4>
+                                    <p>Cyber threats are real and constantly evolving.</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>🛡️ Best Defense</h4>
+                                    <p>Awareness and caution are your best defense.</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>✅ Verify First</h4>
+                                    <p>Always verify before you click, share, or trust.</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>📞 Report Issues</h4>
+                                    <p>Report suspicious or criminal activity to cybercrime.gov.in.</p>
+                                </div>
+                                <div class="takeaway-item">
+                                    <h4>📚 Stay Updated</h4>
+                                    <p>Stay updated with the latest safety tips and tools.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <aside class="content-sidebar">
+                        <div class="sidebar-section">
+                            <h3>📋 Course Outline</h3>
+                            <div class="outline-list">
+                                <div class="outline-item">
+                                    <span class="outline-number">1</span>
+                                    <span class="outline-text">Introduction</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">2</span>
+                                    <span class="outline-text">Phishing & Email Scams</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">3</span>
+                                    <span class="outline-text">Malware & Ransomware</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">4</span>
+                                    <span class="outline-text">Identity Theft</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">5</span>
+                                    <span class="outline-text">Financial Scams</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">6</span>
+                                    <span class="outline-text">Social Engineering</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">7</span>
+                                    <span class="outline-text">Cyberbullying</span>
+                                </div>
+                                <div class="outline-item">
+                                    <span class="outline-number">8</span>
+                                    <span class="outline-text">Fake News</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="sidebar-section">
+                            <h3>🎓 Next Steps</h3>
+                            <div class="next-steps">
+                                <a href="course3.html" class="next-step-btn secondary">Next Course</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Quiz Section -->
+            <section class="quiz-section">
+                <h2>🧠 Knowledge Check</h2>
+                <div class="quiz-container">
+                    <div class="quiz-intro">
+                        <p>Test your understanding of Online Threats and Cyber Crimes</p>
+                        <a href="course2-quiz.html" class="quiz-start-btn">Start Quiz</a>
+                    </div>
+                    <div class="quiz-content" style="display: none;">
+                        <div class="quiz-question">
+                            <h3>Question 1 of 5</h3>
+                            <p>What is phishing?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q1" value="a"> A) A type of malware</label>
+                                <label><input type="radio" name="q1" value="b"> B) Tricking people to reveal information</label>
+                                <label><input type="radio" name="q1" value="c"> C) A security software</label>
+                                <label><input type="radio" name="q1" value="d"> D) A type of virus</label>
+                            </div>
+                        </div>
+                        <div class="quiz-navigation">
+                            <button class="quiz-btn prev-btn" disabled>Previous</button>
+                            <button class="quiz-btn next-btn">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
